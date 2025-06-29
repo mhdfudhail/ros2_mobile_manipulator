@@ -1,0 +1,21 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/fudhail/project_ws/install/robotic_arms_control/lib/python3.10/site-packages",
+        "/home/fudhail/addison2_ws/install/mycobot_interfaces/local/lib/python3.10/dist-packages",
+        "/home/fudhail/addison2_ws/install/mycobot_gazebo/local/lib/python3.10/dist-packages",
+        "/home/fudhail/addison2_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/fudhail/project_ws/install/robotic_arms_control/lib/python3.10/site-packages",
+        "/home/fudhail/addison2_ws/install/mycobot_interfaces/local/lib/python3.10/dist-packages",
+        "/home/fudhail/addison2_ws/install/mycobot_gazebo/local/lib/python3.10/dist-packages",
+        "/home/fudhail/addison2_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "files.associations": {
+        "chrono": "cpp"
+    }
+}
