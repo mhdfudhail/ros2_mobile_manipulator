@@ -37,14 +37,12 @@ endfunction()
 
 add_common_executable(pick_place pick_place.cpp)
 add_common_executable(pick_place_object pick_place_object.cpp)
-add_common_executable(test_srv_pose test_srv_pose.cpp)
 add_common_executable(test_pose test_pose.cpp)
 
 install(TARGETS 
   pick_place_object
   pick_place
   test_pose
-  test_srv_pose
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

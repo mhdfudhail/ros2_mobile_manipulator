@@ -34,8 +34,8 @@ class ObjectPointTFPublisher(Node):
             self.get_logger().warn("No point cloud received yet.")
             return
 
-        u = msg.pixel2_x
-        v = msg.pixel2_y
+        u = msg.pixel3_x
+        v = msg.pixel3_y
         width = self.latest_pointcloud.width
         height = self.latest_pointcloud.height
 
@@ -87,7 +87,7 @@ class ObjectPointTFPublisher(Node):
             tf_msg = TransformStamped()
             tf_msg.header.stamp = self.get_clock().now().to_msg()
             tf_msg.header.frame_id = 'base_link'
-            tf_msg.child_frame_id = msg.object_2
+            tf_msg.child_frame_id = msg.object_3
             tf_msg.transform.translation.x = x_base
             tf_msg.transform.translation.y = y_base
             tf_msg.transform.translation.z = z_base
@@ -98,12 +98,12 @@ class ObjectPointTFPublisher(Node):
 
             self.tf_broadcaster.sendTransform(tf_msg)
             single_pose = SinglePose()
-            single_pose.object = msg.object_2
+            single_pose.object = msg.object_3
             single_pose.x = x_base
             single_pose.y = y_base
             single_pose.z = z_base
             self.pub_pose.publish(single_pose)
-            self.get_logger().info(f"Published TF for {msg.object_2} at ({x_base:.2f}, {y_base:.2f}, {z_base:.2f})")
+            self.get_logger().info(f"Published TF for {msg.object_3} at ({x_base:.2f}, {y_base:.2f}, {z_base:.2f})")
 
         except Exception as e:
             self.get_logger().error(f"Error processing point: {e}")

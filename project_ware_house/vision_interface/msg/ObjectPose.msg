@@ -1,0 +1,9 @@
+string object_1
+int64 pixel1_x
+int64 pixel1_y
+string object_2
+int64 pixel2_x
+int64 pixel2_y
+string object_3
+int64 pixel3_x
+int64 pixel3_y
